@@ -1,0 +1,6 @@
+mysql_config = config['mysql']
+    RDBMS = "mysql"
+    PIP_PACKAGE = "mysqlconnector"
+    SQLALCHEMY_DATABASE_URI = "{}+{}://{}:{}@{}:{}/{}".format(
+    RDBMS, PIP_PACKAGE, mysql_config['user'], mysql_config['password'],
+    mysql_config['host'], mysql_config['port'], mysql_config['database'])
